@@ -8,6 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: unzip -q Savora.zip
+      - run: sed -i 's/com.github.yausername/io.github.junkfood02/' Savora/app/build.gradle.kts
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
